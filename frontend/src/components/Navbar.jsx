@@ -1,47 +1,61 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
-          return (
-              <nav className="navbar navbar-expand-lg navbar-dark bg-success">
-                    <div className="container">
-                            <a className="navbar-brand fw-bold" href="/">
-                                      DeenByte
-                                              </a>
+  return (
+      <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+            <div className="container">
 
-                                                      <button
-                                                                className="navbar-toggler"
-                                                                          type="button"
-                                                                                    data-bs-toggle="collapse"
-                                                                                              data-bs-target="#navbarNav"
-                                                                                                        aria-controls="navbarNav"
-                                                                                                                  aria-expanded="false"
-                                                                                                                            aria-label="Toggle navigation"
-                                                                                                                                    >
-                                                                                                                                              <span className="navbar-toggler-icon"></span>
-                                                                                                                                                      </button>
+                    <Link className="navbar-brand fw-bold" to="/">
+                              DeenByte
+                                      </Link>
 
-                                                                                                                                                              <div className="collapse navbar-collapse" id="navbarNav">
-                                                                                                                                                                        <ul className="navbar-nav ms-auto">
-                                                                                                                                                                                    <li className="nav-item">
-                                                                                                                                                                                                  <a className="nav-link" href="/">Home</a>
-                                                                                                                                                                                                              </li>
+                                              <button
+                                                        className="navbar-toggler"
+                                                                  type="button"
+                                                                            data-bs-toggle="collapse"
+                                                                                      data-bs-target="#navbarNav"
+                                                                                                aria-controls="navbarNav"
+                                                                                                          aria-expanded="false"
+                                                                                                                    aria-label="Toggle navigation"
+                                                                                                                            >
+                                                                                                                                      <span className="navbar-toggler-icon"></span>
+                                                                                                                                              </button>
 
-                                                                                                                                                                                                                          <li className="nav-item">
-                                                                                                                                                                                                                                        <a className="nav-link" href="/">Services</a>
-                                                                                                                                                                                                                                                    </li>
+                                                                                                                                                      <div className="collapse navbar-collapse" id="navbarNav">
+                                                                                                                                                                <ul className="navbar-nav ms-auto">
 
-                                                                                                                                                                                                                                                                <li className="nav-item">
-                                                                                                                                                                                                                                                                              <a className="nav-link" href="/">About</a>
-                                                                                                                                                                                                                                                                                          </li>
+                                                                                                                                                                            <li className="nav-item">
+                                                                                                                                                                                          <Link className="nav-link" to="/">
+                                                                                                                                                                                                          Home
+                                                                                                                                                                                                                        </Link>
+                                                                                                                                                                                                                                    </li>
 
-                                                                                                                                                                                                                                                                                                      <li className="nav-item">
-                                                                                                                                                                                                                                                                                                                    <a className="nav-link" href="/">Contact</a>
-                                                                                                                                                                                                                                                                                                                                </li>
-                                                                                                                                                                                                                                                                                                                                          </ul>
-                                                                                                                                                                                                                                                                                                                                                  </div>
-                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                            </nav>
-                                                                                                                                                                                                                                                                                                                                                              );
-                                                                                                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                <li className="nav-item">
+                                                                                                                                                                                                                                                              <Link className="nav-link" to="/about">
+                                                                                                                                                                                                                                                                              About
+                                                                                                                                                                                                                                                                                            </Link>
+                                                                                                                                                                                                                                                                                                        </li>
 
-                                                                                                                                                                                                                                                                                                                                                              export default Navbar;
+                                                                                                                                                                                                                                                                                                                    <li className="nav-item">
+                                                                                                                                                                                                                                                                                                                                  <Link className="nav-link" to="/services">
+                                                                                                                                                                                                                                                                                                                                                  Services
+                                                                                                                                                                                                                                                                                                                                                                </Link>
+                                                                                                                                                                                                                                                                                                                                                                            </li>
+
+                                                                                                                                                                                                                                                                                                                                                                                        <li className="nav-item">
+                                                                                                                                                                                                                                                                                                                                                                                                      <Link className="nav-link" to="/contact">
+                                                                                                                                                                                                                                                                                                                                                                                                                      Contact
+                                                                                                                                                                                                                                                                                                                                                                                                                                    </Link>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                </li>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </nav>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              );
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              export default Navbar;
 
 
