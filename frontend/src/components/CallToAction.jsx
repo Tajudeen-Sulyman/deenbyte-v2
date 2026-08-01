@@ -5,13 +5,13 @@ function CallToAction() {
                         Ready to Grow Your Business?
                               </h2>
 
-                                    <p className="lead mt-3">
-                                            Register your business, automate operations, and access digital services
-                                                    all in one place.
+                                    <p className="lead">
+                                            Let's help you register your business, build your
+                                                    website, and automate your operations.
                                                           </p>
 
-                                                                <button className="btn btn-success btn-lg mt-3">
-                                                                        Get Started Today
+                                                                <button className="btn btn-success btn-lg">
+                                                                        Contact Us Today
                                                                               </button>
                                                                                   </section>
                                                                                     );
