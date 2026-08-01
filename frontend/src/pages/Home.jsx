@@ -1,23 +1,19 @@
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Services from "../components/Services";
+import ServicesPreview from "../components/ServicesPreview";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Stats from "../components/Stats";
 import CallToAction from "../components/CallToAction";
-import Footer from "../components/Footer";
 
 function Home() {
   return (
       <>
-            <Navbar />
-                  <Hero />
-                        <Services />
+            <Hero />
+                  <ServicesPreview />
                         <WhyChooseUs />
-                        <Stats />
-                        <CallToAction />
-                              <Footer />
-                                  </>
-                                    );
-                                    }
+                              <Stats />
+                                    <CallToAction />
+                                        </>
+                                          );
+                                          }
 
-                                    export default Home;
+                                          export default Home;
