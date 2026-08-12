@@ -1,61 +1,92 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeMenu = () => setIsOpen(false);
+
+  const linkClass = ({ isActive }) =>
+    `nav-link px-3 ${isActive ? "active fw-semibold" : ""}`;
+
   return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-success">
-            <div className="container">
+    <nav className="navbar navbar-expand-lg navbar-dark">
+      <div className="container">
+        <Link className="navbar-brand fw-bold" to="/" onClick={closeMenu}>
+          DeenByte
+        </Link>
 
-                    <Link className="navbar-brand fw-bold" to="/">
-                              DeenByte
-                                      </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          aria-controls="navbarNav"
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-                                              <button
-                                                        className="navbar-toggler"
-                                                                  type="button"
-                                                                            data-bs-toggle="collapse"
-                                                                                      data-bs-target="#navbarNav"
-                                                                                                aria-controls="navbarNav"
-                                                                                                          aria-expanded="false"
-                                                                                                                    aria-label="Toggle navigation"
-                                                                                                                            >
-                                                                                                                                      <span className="navbar-toggler-icon"></span>
-                                                                                                                                              </button>
+        <div
+          id="navbarNav"
+          className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
+        >
+          <ul className="navbar-nav ms-auto align-items-lg-center">
+            <li className="nav-item">
+              <NavLink
+                className={linkClass}
+                to="/"
+                end
+                onClick={closeMenu}
+              >
+                Home
+              </NavLink>
+            </li>
 
-                                                                                                                                                      <div className="collapse navbar-collapse" id="navbarNav">
-                                                                                                                                                                <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <NavLink
+                className={linkClass}
+                to="/about"
+                onClick={closeMenu}
+              >
+                About
+              </NavLink>
+            </li>
 
-                                                                                                                                                                            <li className="nav-item">
-                                                                                                                                                                                          <Link className="nav-link" to="/">
-                                                                                                                                                                                                          Home
-                                                                                                                                                                                                                        </Link>
-                                                                                                                                                                                                                                    </li>
+            <li className="nav-item">
+              <NavLink
+                className={linkClass}
+                to="/services"
+                onClick={closeMenu}
+              >
+                Services
+              </NavLink>
+            </li>
 
-                                                                                                                                                                                                                                                <li className="nav-item">
-                                                                                                                                                                                                                                                              <Link className="nav-link" to="/about">
-                                                                                                                                                                                                                                                                              About
-                                                                                                                                                                                                                                                                                            </Link>
-                                                                                                                                                                                                                                                                                                        </li>
+            <li className="nav-item">
+              <NavLink
+                className={linkClass}
+                to="/contact"
+                onClick={closeMenu}
+              >
+                Contact
+              </NavLink>
+            </li>
 
-                                                                                                                                                                                                                                                                                                                    <li className="nav-item">
-                                                                                                                                                                                                                                                                                                                                  <Link className="nav-link" to="/services">
-                                                                                                                                                                                                                                                                                                                                                  Services
-                                                                                                                                                                                                                                                                                                                                                                </Link>
-                                                                                                                                                                                                                                                                                                                                                                            </li>
+            <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <Link
+                className="btn btn-light px-4"
+                to="/auth/login"
+                onClick={closeMenu}
+              >
+                Login
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                        <li className="nav-item">
-                                                                                                                                                                                                                                                                                                                                                                                                      <Link className="nav-link" to="/contact">
-                                                                                                                                                                                                                                                                                                                                                                                                                      Contact
-                                                                                                                                                                                                                                                                                                                                                                                                                                    </Link>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                </li>
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          </ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </nav>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              );
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              export default Navbar;
-
-
+export default Navbar;

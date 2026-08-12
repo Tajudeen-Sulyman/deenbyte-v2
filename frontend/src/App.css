@@ -182,3 +182,56 @@
     border-right-color: var(--border);
   }
 }
+
+/* DeenByte navigation */
+.navbar .nav-link {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.85;
+}
+
+.navbar .nav-link.active {
+  color: #ffffff !important;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 2px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+  }
+}
+
+.navbar .btn-light {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar .btn-light:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding-bottom: 0.75rem;
+  }
+
+  .navbar .nav-link {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .navbar .btn-light {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
